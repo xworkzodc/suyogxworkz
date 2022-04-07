@@ -159,9 +159,10 @@ public class IplTeamRunner {
 		castedDAO.save(ipldto13);
 		castedDAO.save(ipldto14);
 
+		String name=ipldto1.getName();
 		
-		castedDAO.findByName("Rishabh Pant");
-		
+		IplTeamDTO dtoTemp=castedDAO.findByName("Rishabh Pant");
+		System.out.println(IplTeamDTO);
 		
 		castedDAO.findByNameandSponsor("Ravindra Jadeja","Krishnan Murthy");
 		

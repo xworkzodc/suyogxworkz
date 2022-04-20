@@ -4,10 +4,10 @@ public class CriminalRunner {
 
 	public static void main(String[] args) {
 		
-		CriminalDAO dto = new CriminalDTO();
-		criminaldao.save(null);
+		CriminalDAO dao = new CriminalDAO();
 		
-		CriminalService criminalservice = new CriminalService(criminaldao);
+		CriminalService criminalservice = new CriminalService(dao);
+		criminalservice.setDao(dao);
 		
 		CriminalDTO dto = new CriminalDTO();
 		dto.setId(600);
@@ -15,7 +15,7 @@ public class CriminalRunner {
 		dto.setOffense("Robbery");
 		dto.setImprisonment(4);
 		dto.setJailName("Yerwada Pune");
-		criminaldao.save(dto);
+		
 		
 		criminalservice.validateAndSave(dto);
 
